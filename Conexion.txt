@@ -1,0 +1,19 @@
+
+
+instalar consola
+Install-Package Microsoft.EntityFrameworkCore.SqlServer  -Version 6.0.1
+
+
+
+Install-Package Microsoft.EntityFrameworkCore.Tools  -Version 6.0.1
+
+
+-------------------------conectar BD
+
+
+Scaffold-DbContext "Data Source=WindowsServer20,1433;Initial Catalog=Empresa;Persist Security Info=False;User ID=sa;Password=Temporal+1 ;MultipleActiveResultSets=False;Encrypt=false;TrustServerCertificate=False;Connection Timeout=30;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Modelos
+
+
+
+Scaffold-DbContext -force "Data Source=WindowsServer20,1433;Initial Catalog=Empresa;Persist Security Info=False;User ID=sa;Password=Temporal+1 ;MultipleActiveResultSets=False;Encrypt=false;TrustServerCertificate=False;Connection Timeout=30;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Modelos
+
